@@ -1,0 +1,113 @@
+:root {
+    --calculatorBackground: #000000aa;
+    --borderColor: rgb(84, 84, 84);
+    --displayColor: #f6f1f1bb;
+    --btnColor: #f6f1f1bb;
+    --btnClearColor: #c2c2c299;
+    --btnOperationsBgColor: #19a7ce55;
+    --btnEqualColor: #146b9499;
+    --btnClearEraseColor: #292929;
+    --btnOperationColor: #19A7CE;
+    --bntNumberColor: #1b6275;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;    
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    position: absolute; 
+    height: 100%; 
+    width: 100%; 
+    background-image: url('img/background-math.jpg');
+    background-size: cover; 
+    background-position: center; 
+    filter: blur(3px); 
+    z-index: -1; 
+}
+
+.calculator-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 20%;
+    min-width: 400px;
+    border: 2px solid var(--borderColor);
+    border-radius: 20px;
+    padding: 30px;
+	backdrop-filter: blur(5px); /* blur effect to the backdrop */
+	background-color: var(--calculatorBackground)
+}
+
+.display,.keybord {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 100%;
+}
+
+.display {
+    height: 200px;
+    border: 1px solid var(--borderColor);
+    border-radius: 10px;
+    justify-content: flex-end;
+    align-items: end;
+    font-size: 2em;
+    background: var(--displayColor);
+    color: #fff;
+    padding: 15px 15px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: flex;
+    flex: 0 1 25%;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 20px;
+    border-top:none;
+    border-left:none;
+    cursor: pointer;
+    background: var(--btnColor);
+    font-size:1.5em;
+}
+
+.btn-clear,.btn-equal {
+    flex-basis: 50%;
+}
+
+.btn-number {
+    color: var(--bntNumberColor);
+}
+
+.btn-divide,.btn-multiply,.btn-sub,.btn-add {
+    background: var(--btnOperationsBgColor);
+    color: var(--btnOperationColor);
+}
+
+.btn-clear,.btn-erase  {
+    background: var(--btnClearColor);
+    color: var(--btnClearEraseColor)
+}
+
+.btn-equal {
+    background: var(--btnEqualColor);
+    color: var(--btnOperationColor);
+}
+
+.btn:hover {
+    opacity: 0.75;
+}
+
