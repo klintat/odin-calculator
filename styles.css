@@ -61,8 +61,12 @@ main {
     height: 200px;
     border: 1px solid var(--borderColor);
     border-radius: 10px;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: end;
+    gap: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
     font-size: 2em;
     background: var(--displayColor);
     color: #fff;
@@ -70,7 +74,11 @@ main {
     margin-bottom: 10px;
 }
 
-.btn {
+.previous-operand,.current-operand {
+    min-height: 1px;
+}
+
+button {
     display: flex;
     flex: 0 1 25%;
     justify-content: center;
@@ -88,7 +96,7 @@ main {
     flex-basis: 50%;
 }
 
-.btn-number {
+.btn-number,.btn-dot {
     color: var(--bntNumberColor);
 }
 
@@ -107,7 +115,7 @@ main {
     color: var(--btnOperationColor);
 }
 
-.btn:hover {
+button:hover {
     opacity: 0.75;
 }
 
